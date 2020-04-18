@@ -1,0 +1,25 @@
+ID_NODO_ORIGINE;ID_NODO_DESTINAZIONE;CODICE_LEGAME;DS_LEGAME
+00001059;00001059;AGE;Sogg. Anagraf. di Ente Esterno
+00001220;00000852;FIR;Delega alla firma
+00002091;00002091;AGE;Sogg. Anagraf. di Ente Esterno
+00002091;00003600;FIR;Delega alla firma
+00000001;00002234;AGE;Sogg. Anagraf. di Ente Esterno
+00000001;00002279;AGE;Sogg. Anagraf. di Ente Esterno
+00001012;00002105;AGE;Sogg. Anagraf. di Ente Esterno
+00001220;00000300;FIR;Delega alla firma
+00002090;00002645;FIR;Delega alla firma
+00002090;00003533;FIR;Delega alla firma
+00002637;00002637;FIR;Delega alla firma
+00002095;00001811;FIR;Delega alla firma
+00002104;00002096;CON;Rap. di controllante
+00002106;00002090;CON;Rap. di controllante
+00002108;00002087;CON;Rap. di controllante
+00002199;00002082;CON;Rap. di controllante
+00002232;00002200;FUS;Voltura per Fusione-Incorporaz
+00002241;00002090;CON;Rap. di controllante
+00002252;00002087;CON;Rap. di controllante
+00002257;00002096;CON;Rap. di controllante
+00002260;00002096;CON;Rap. di controllante
+00002266;00002090;CON;Rap. di controllante
+00002653;00002653;FIR;Delega alla firma
+00000828;00000828;FIR;Delega alla firma
