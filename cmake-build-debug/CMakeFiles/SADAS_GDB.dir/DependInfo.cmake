@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/gemma/CLionProjects/SADAS_GDB/main.cpp" "/Users/gemma/CLionProjects/SADAS_GDB/cmake-build-debug/CMakeFiles/SADAS_GDB.dir/main.cpp.o"
   "/Users/gemma/CLionProjects/SADAS_GDB/src/C++/CTP_graph.cpp" "/Users/gemma/CLionProjects/SADAS_GDB/cmake-build-debug/CMakeFiles/SADAS_GDB.dir/src/C++/CTP_graph.cpp.o"
   "/Users/gemma/CLionProjects/SADAS_GDB/src/C++/NEXI_graph.cpp" "/Users/gemma/CLionProjects/SADAS_GDB/cmake-build-debug/CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.o"
+  "/Users/gemma/CLionProjects/SADAS_GDB/src/C++/prova.cpp" "/Users/gemma/CLionProjects/SADAS_GDB/cmake-build-debug/CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

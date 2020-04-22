@@ -95,7 +95,7 @@ public:
         std::cout << "Number of vertices in file: "<< num_lines(path) - 1
             <<"\n";
         std::ifstream nodes_file(path);
-        long long int line_no = 0;
+        //long long int line_no = 0;
         // For each line in nodes file add vertex
         for (CSVIterator loop(nodes_file); loop != CSVIterator(); ++loop) {
             //std::clog << "Line number: " << ++line_no << std::endl;

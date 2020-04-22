@@ -204,6 +204,33 @@ src/C++/NEXI_graph.cpp.s:
 	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.s
 .PHONY : src/C++/NEXI_graph.cpp.s
 
+src/C++/prova.o: src/C++/prova.cpp.o
+
+.PHONY : src/C++/prova.o
+
+# target to build an object file
+src/C++/prova.cpp.o:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o
+.PHONY : src/C++/prova.cpp.o
+
+src/C++/prova.i: src/C++/prova.cpp.i
+
+.PHONY : src/C++/prova.i
+
+# target to preprocess a source file
+src/C++/prova.cpp.i:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.i
+.PHONY : src/C++/prova.cpp.i
+
+src/C++/prova.s: src/C++/prova.cpp.s
+
+.PHONY : src/C++/prova.s
+
+# target to generate assembly for a file
+src/C++/prova.cpp.s:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.s
+.PHONY : src/C++/prova.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... src/C++/NEXI_graph.o"
 	@echo "... src/C++/NEXI_graph.i"
 	@echo "... src/C++/NEXI_graph.s"
+	@echo "... src/C++/prova.o"
+	@echo "... src/C++/prova.i"
+	@echo "... src/C++/prova.s"
 .PHONY : help
 
 
