@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 project(SADAS_GDB)
 
-set(CMAKE_CXX_STANDARD 14)
+set(APP_DOMAIN ./src)
 
-add_executable(SADAS_GDB main.cpp)
+#Include the directories and now your cpp files will recognize your headers
+include_directories(${APP_DOMAIN})
+
+set(CMAKE_CXX_STANDARD 17)
+
+
+add_executable(SADAS_GDB main.cpp src/C++/CTP_graph.cpp src/C++/CTP_graph.h src/C++/NEXI_graph.cpp src/C++/NEXI_graph.h)

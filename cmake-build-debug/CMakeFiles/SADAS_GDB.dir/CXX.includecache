@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gemma/CLionProjects/SADAS_GDB/main.cpp
+src/C++/AUI_graph.h
+/Users/gemma/CLionProjects/SADAS_GDB/src/C++/AUI_graph.h
+
+/Users/gemma/CLionProjects/SADAS_GDB/src/C++/AUI_graph.h
+SADAS_graph.h
+/Users/gemma/CLionProjects/SADAS_GDB/src/C++/SADAS_graph.h
+
+/Users/gemma/CLionProjects/SADAS_GDB/src/C++/SADAS_graph.h
+map
+-
+read_utilities.hpp
+/Users/gemma/CLionProjects/SADAS_GDB/src/C++/read_utilities.hpp
+
+/Users/gemma/CLionProjects/SADAS_GDB/src/C++/read_utilities.hpp
+fstream
+-
+iostream
+-
+iterator
+-
+sstream
+-
+string
+-
+vector
+-
+

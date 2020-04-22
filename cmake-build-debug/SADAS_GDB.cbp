@@ -44,10 +44,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Users/gemma/CLionProjects/SADAS_GDB/./src"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -65,10 +68,13 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Users/gemma/CLionProjects/SADAS_GDB/./src"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -81,6 +87,18 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/main.cpp">
+			<Option target="SADAS_GDB"/>
+		</Unit>
+		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/CTP_graph.cpp">
+			<Option target="SADAS_GDB"/>
+		</Unit>
+		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/CTP_graph.h">
+			<Option target="SADAS_GDB"/>
+		</Unit>
+		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/NEXI_graph.cpp">
+			<Option target="SADAS_GDB"/>
+		</Unit>
+		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/NEXI_graph.h">
 			<Option target="SADAS_GDB"/>
 		</Unit>
 		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/CMakeLists.txt">

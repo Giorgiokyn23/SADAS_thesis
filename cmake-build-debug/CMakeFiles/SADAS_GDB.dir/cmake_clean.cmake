@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SADAS_GDB.dir/main.cpp.o"
+  "CMakeFiles/SADAS_GDB.dir/src/C++/CTP_graph.cpp.o"
+  "CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.o"
   "SADAS_GDB"
   "SADAS_GDB.pdb"
 )
