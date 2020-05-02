@@ -104,6 +104,15 @@
 		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/prova.cpp">
 			<Option target="SADAS_GDB"/>
 		</Unit>
+		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/test_blue.cpp">
+			<Option target="SADAS_GDB"/>
+		</Unit>
+		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/test_orange.cpp">
+			<Option target="SADAS_GDB"/>
+		</Unit>
+		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/src/C++/utils.h">
+			<Option target="SADAS_GDB"/>
+		</Unit>
 		<Unit filename="/Users/gemma/CLionProjects/SADAS_GDB/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

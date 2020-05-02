@@ -1,0 +1,10 @@
+ID_NODO_ORIGINE;ID_NODO_DESTINAZIONE;CODICE_LEGAME;DS_LEGAME
+00000001;00000011;AGE;Sogg. Anagraf. di Ente Esterno
+00000001;00000011;FIR;Delega alla firma
+00000001;00000011;AGE;Sogg. Anagraf. di Ente Esterno
+00000011;00000012;FIR;Delega alla firma
+00000011;00000013;AGE;Sogg. Anagraf. di Ente Esterno
+00000012;00000016;AGE;Sogg. Anagraf. di Ente Esterno
+00000013;00000015;AGE;Sogg. Anagraf. di Ente Esterno
+00000015;00000016;FIR;Delega alla firma
+00000015;00000016;FIR;Delega alla firma

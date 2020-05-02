@@ -14,6 +14,24 @@
 	const std::string NEXI_EDGES = "../../data/my_datasets/small/NEXI_edges.csv";
 	const std::string CTP_EDGES = "../../data/my_datasets/small/CTP_edges.csv";
 
+#elif BLUE
+    const std::string AUI_NODES = "../../data/my_datasets/small/AUI_nodes_test_blue.csv";
+	const std::string NEXI_NODES = "../../data/my_datasets/small/NEXI_nodes_test_blue.csv";
+	const std::string CTP_NODES = "../../data/my_datasets/small/CTP_nodes_test_blue.csv";
+
+	const std::string AUI_EDGES = "../../data/my_datasets/small/AUI_edges_test_blue.csv";
+	const std::string NEXI_EDGES = "../../data/my_datasets/small/NEXI_edges_test_blue.csv";
+	const std::string CTP_EDGES = "../../data/my_datasets/small/CTP_edges_test_blue.csv";
+
+#elif ORANGE
+    const std::string AUI_NODES = "../../data/my_datasets/small/AUI_nodes_test_orange.csv";
+	const std::string NEXI_NODES = "../../data/my_datasets/small/NEXI_nodes_test_orange.csv";
+	const std::string CTP_NODES = "../../data/my_datasets/small/CTP_nodes_test_orange.csv";
+
+	const std::string AUI_EDGES = "../../data/my_datasets/small/AUI_edges_test_orange.csv";
+	const std::string NEXI_EDGES = "../../data/my_datasets/small/NEXI_edges_test_orange.csv";
+	const std::string CTP_EDGES = "../../data/my_datasets/small/CTP_edges_test_orange.csv";
+
 #elif TEST1
     const std::string AUI_NODES = "../../data/my_datasets/small/AUI_nodes_test01.csv";
 	const std::string NEXI_NODES = "../../data/my_datasets/small/NEXI_nodes_test01.csv";

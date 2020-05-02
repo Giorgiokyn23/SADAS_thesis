@@ -231,6 +231,60 @@ src/C++/prova.cpp.s:
 	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.s
 .PHONY : src/C++/prova.cpp.s
 
+src/C++/test_blue.o: src/C++/test_blue.cpp.o
+
+.PHONY : src/C++/test_blue.o
+
+# target to build an object file
+src/C++/test_blue.cpp.o:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.o
+.PHONY : src/C++/test_blue.cpp.o
+
+src/C++/test_blue.i: src/C++/test_blue.cpp.i
+
+.PHONY : src/C++/test_blue.i
+
+# target to preprocess a source file
+src/C++/test_blue.cpp.i:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.i
+.PHONY : src/C++/test_blue.cpp.i
+
+src/C++/test_blue.s: src/C++/test_blue.cpp.s
+
+.PHONY : src/C++/test_blue.s
+
+# target to generate assembly for a file
+src/C++/test_blue.cpp.s:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.s
+.PHONY : src/C++/test_blue.cpp.s
+
+src/C++/test_orange.o: src/C++/test_orange.cpp.o
+
+.PHONY : src/C++/test_orange.o
+
+# target to build an object file
+src/C++/test_orange.cpp.o:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_orange.cpp.o
+.PHONY : src/C++/test_orange.cpp.o
+
+src/C++/test_orange.i: src/C++/test_orange.cpp.i
+
+.PHONY : src/C++/test_orange.i
+
+# target to preprocess a source file
+src/C++/test_orange.cpp.i:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_orange.cpp.i
+.PHONY : src/C++/test_orange.cpp.i
+
+src/C++/test_orange.s: src/C++/test_orange.cpp.s
+
+.PHONY : src/C++/test_orange.s
+
+# target to generate assembly for a file
+src/C++/test_orange.cpp.s:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_orange.cpp.s
+.PHONY : src/C++/test_orange.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +306,12 @@ help:
 	@echo "... src/C++/prova.o"
 	@echo "... src/C++/prova.i"
 	@echo "... src/C++/prova.s"
+	@echo "... src/C++/test_blue.o"
+	@echo "... src/C++/test_blue.i"
+	@echo "... src/C++/test_blue.s"
+	@echo "... src/C++/test_orange.o"
+	@echo "... src/C++/test_orange.i"
+	@echo "... src/C++/test_orange.s"
 .PHONY : help
 
 
