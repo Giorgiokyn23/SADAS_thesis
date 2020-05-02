@@ -32,6 +32,10 @@ test_blue: test_blue.cpp utils.h AUI_graph.h SADAS_graph.h read_utilities.hpp
 
 test_orange: test_orange.cpp utils.h AUI_graph.h SADAS_graph.h read_utilities.hpp
 	$(CC) $(CFLAGS) -D ORANGE -o test_orange test_orange.cpp
+
+test_green: test_green.cpp utils.h AUI_graph.h SADAS_graph.h read_utilities.hpp
+	$(CC) $(CFLAGS) -D ORANGE -o test_green test_green.cpp
+
 # Run tests
 run_prova:
 	make -s cleanall
@@ -65,3 +69,10 @@ run_orange:
 	./test_orange 2> /dev/null
 	@echo "----------------------->Done with testing orange<------------------------"
 
+run_green:
+	make -s cleanall
+	make -s test_green
+	@echo "------------------->Running test of green function<---------------------"
+	# Comment 2> /dev/null for printing log
+	./test_green 2> /dev/null
+	@echo "----------------------->Done with testing green<------------------------"

@@ -6,40 +6,47 @@
 
 
 template <typename id_type>
-
-void print_green(std::array<std::pair<long long int,
-        std::vector<id_type>>, 2> a, id_type t1, id_type t2) {
-    std::cout << "=====From " << t1 << " to "
-              << t2 << "=====\n";
-    std::cout << a[0].first << ": ";
-    for(auto t=a[0].second.begin(); t!=a[0].second.end(); ++t)
-        std::cout << *t << " ";
-    std::cout << std::endl;
-    std::cout << "=====From " << t2 << " to "
-              << t1 << "=====\n";
-    std::cout << a[1].first << ": ";
-    for(auto t=a[1].second.begin(); t!=a[1].second.end(); ++t)
-        std::cout << *t << " ";
-    std::cout << std::endl;
+void print_green(std::map<id_type, int> a, id_type t) {
+    for (auto i = a.begin(); i != a.end(); ++i) {
+        std::cout << "Node: " << (*i).first << "; Distance: " << (*i).second << std::endl;
+    }
 }
 
 int main() {
     // Testing orange on AUI graph
     AUI_graph my_AUI = load_AUI();
-    std::string target1 = "0000000000001259";
-    std::string target2 = "0000000000001314";
-    print_green(my_AUI.orange(target1, target2), target1, target2);
+    std::string subj = "0000000000001259";
+    int n = 2;
+    std::unordered_set<std::string> suspects;
+    suspects.insert("0000000000001259");
+    suspects.insert("0000000000001261");
+    suspects.insert("0000000000001262");
+    suspects.insert("0000000000001314");
+    std::map<std::string, int> ans = my_AUI.green(subj, n, suspects);
+    print_green(ans, subj);
 
     // Testing blue on CTP graph
     CTP_graph my_CTP = load_CTP();
-    long long int t1 = 1;
-    long long int t2 = 16;
-    print_green(my_CTP.orange(t1, t2), t1, t2);
+    long long int sub = 1;
+    n = 2;
+    std::unordered_set<long long int> susp;
+    susp.insert(1);
+    susp.insert(11);
+    susp.insert(12);
+    susp.insert(15);
+    std::map<long long int, int> an = my_CTP.green(sub, n, susp);
+    print_green(an, sub);
 
     // Testing blue on NEXI graph
     NEXI_graph my_NEXI = load_NEXI();
-    t1 = 26285;
-    t2 = 3297;
-    print_green(my_NEXI.orange(t1, t2), t1, t2);
+    sub = 26285;
+    n = 2;
+    std::unordered_set<long long int> susps;
+    susps.insert(26285);
+    susps.insert(3297);
+    susps.insert(6924);
+    susps.insert(2106);
+    an = my_NEXI.green(sub, n, susps);
+    print_green(an, sub);
     return 0;
 }

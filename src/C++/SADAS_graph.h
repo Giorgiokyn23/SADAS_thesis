@@ -254,8 +254,6 @@ public:
         return visited;
     }
 
-
-
     /**
      * This method implements orange query
      * -->connections between subjects<--
@@ -278,9 +276,55 @@ public:
         return ans;
     }
 
-    void green() {
-
-
+    /**
+     * Method implementing green query
+     * --> connections with suspects <<--
+     * Given a subject and a set of nodes, extract those at a distance
+     * smaller than n from it
+     * @param target the id of the starting node
+     * @param n the maximum distance
+     * @param suspects set of suspects
+     * @return a map from node id to distance
+     */
+    std::map<id_type, int> green(id_type target, int n,
+            std::unordered_set<id_type> suspects) {
+        std::queue<std::pair<id_type, int>> q; // Queue of <node, distance>
+        std::map<id_type, int> visited; // Map from node to distance
+        std::pair<id_type, int> my_couple;
+        my_couple.first = target;
+        my_couple.second = 0;
+        q.push(my_couple);
+        while(!q.empty()) {
+            id_type curr_node = q.front().first;
+            int curr_dist = q.front().second;
+            std::clog << "node: " << curr_node << " dist: " << curr_dist
+                      << std::endl;
+            q.pop();
+            // If the current node is too far break
+            if (curr_dist > n) break;
+            // curr_node might has already been visited (put in q before
+            // being visited)
+            if (visited.find(curr_node) != visited.end())
+                continue;
+            // If the current node has not been visited visit it
+            visited[curr_node] = curr_dist;
+            // And add all the neighbours of current node to queue
+            std::unordered_set<id_type> neighs = neighbours(curr_node);
+            for (auto neigh = neighs.begin(); neigh != neighs.end(); ++neigh) {
+                // If neigh is not in the suspects list go to next neighbour
+                if (suspects.find((*neigh)) == suspects.end())
+                    continue;
+                // If neigh has not been visited yet
+                if (visited.find((*neigh)) == visited.end()) {
+                    std::clog << "Curr_dist: " << curr_dist << " Neigh: "
+                              << (*neigh) <<std::endl;
+                    my_couple.first = (*neigh);
+                    my_couple.second = curr_dist + 1;
+                    q.push(my_couple);
+                }
+            }
+        }
+        return visited;
     }
 };
 
