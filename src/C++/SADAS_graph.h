@@ -33,7 +33,8 @@ class SADAS_graph {
 protected:
     id2nd_t<id_type, node_t> nodes_map; // id -> node_t
     id2edg_t<id_type, edge_t> edges_map;// (id, id) -> vector of edge_t
-    adjl_t<id_type> g;// (id) -> set of id
+    adjl_t<id_type> g;// (id) -> set of ids
+    adjl_t<id_type> unoriented_g;// (id) -> set of ids
     /**
      * PURE ABSTRACT METHOD for loading a line from the csv file containing
      * nodes into the nodes' map of the graph
@@ -105,7 +106,67 @@ protected:
         return std::make_pair(visited[to], path);
     }
 
+    /**
+     * This method creates a new unoriented graph preserving the topology
+     * and stores the new adjacency list in the field unoriented_g of the class
+     *
+     */
+    void make_unoriented() {
+        for (auto node: g) {
+            for (auto neigh = node.second.begin(); neigh != node.second.end();
+                 ++neigh) {
+                unoriented_g[node.first].insert(*neigh);
+                unoriented_g[*neigh].insert(node.first);
+            }
+        }
+        /*for (auto n: unoriented_g) {
+            std::cout << "\nNeighs of " << n.first << ":\n";
+            for (auto ng = n.second.begin(); ng != n.second.end(); ++ng) {
+                std::cout << *ng << " ";
+            }
+        }*/
+    }
+
+    /**
+     * This method finds the neighbours of a node in the undirected version
+     * of the graph
+     * @param id identifier of target node
+     * @return the set of ids of (undirected) neighbours
+     */
+    std::unordered_set<id_type> u_neighbours(id_type id) {
+        auto it = unoriented_g.find(id);
+        if (it != unoriented_g.end())
+            return it->second;
+        return std::unordered_set<id_type>();
+    }
+
+    /**
+     * This method implements the utility function for performing a recursive
+     * DFS on the graph for the computation of connected components
+     * @param node id of starting node
+     * @param visited reference of a set of identifiers representing the
+     *      visited nodes
+     * @param cc reference of a set of identifiers representing the
+     *      current connected component
+     */
+    void DFS_utils(id_type node, std::unordered_set<id_type> &visited,
+            std::unordered_set<id_type> &cc) {
+        // Mark the current node as visited and add it to set of ccs
+        visited.insert(node);
+        cc.insert(node);
+
+        // Recur for all the vertices adjacent to this vertex
+        std::unordered_set<id_type> neighs = u_neighbours(node);
+        for (auto neigh = neighs.begin(); neigh != neighs.end(); ++neigh) {
+            // If neigh has not been visited yet
+            if (visited.find((*neigh)) == visited.end()) {
+                DFS_utils(*neigh, visited, cc);
+            }
+        }
+    }
+
 public:
+
     /**
      * This method provides the number of nodes in the network
      * @return the number of nodes
@@ -325,6 +386,38 @@ public:
             }
         }
         return visited;
+    }
+
+
+    void print_ccs(std::vector<std::unordered_set<id_type>> ccs) {
+        std::cout << "Dentro print_css\n ";
+        for (auto cc = ccs.begin(); cc != ccs.end(); ++cc) {
+            std::cout << "New connected component:\n";
+            for (auto node = cc->begin(); node != cc->end(); ++node) {
+                std::cout << *node << " " << std::endl;
+            }
+        }
+    }
+
+    std::vector<std::unordered_set<id_type>> connected_components() {
+        //Make graph unoriented
+        make_unoriented();
+        // Create empty set for visited nodes
+        std::unordered_set<id_type> visited;
+        // Create vector of connected components
+        std::vector<std::unordered_set<id_type>> ccs;
+        for (auto n: unoriented_g) {
+            std::clog << "Current node: " << n.first << std::endl;
+            if (visited.find((n.first)) == visited.end()) {
+                // Find its connected component
+                std::unordered_set<id_type> cc;
+                DFS_utils(n.first, visited, cc);
+                std::clog << "Taglia componente connessa: "
+                << cc.size() << std::endl;
+                ccs.push_back(cc);
+            }
+        }
+        return ccs;
     }
 };
 
