@@ -6,6 +6,7 @@
 #include <map>
 #include <array>
 #include <queue>
+#include <stack>
 #include <unordered_set>
 
 #include "read_utilities.hpp"
@@ -107,7 +108,7 @@ protected:
     }
 
     /**
-     * This method creates a new unoriented graph preserving the topology
+     * This method creates a new unoriented graph preserving the frontology
      * and stores the new adjacency list in the field unoriented_g of the class
      *
      */
@@ -164,6 +165,71 @@ protected:
             }
         }
     }
+
+    /**
+     * This method implements the utility function for performing a recursive
+     * DFS on the transposed graph for the computation of
+     * strongly connected components
+     * @param gt adjacency list of transposed graph
+     * @param node id of starting node
+     * @param visited  reference of a set of identifiers representing the
+     *      visited nodes
+     * @param scc reference of a set of identifiers representing the
+     *      current strongly connected component
+     */
+    void DFS_utils_scc(adjl_t<id_type> gt, id_type node,
+            std::unordered_set<id_type> &visited,
+            std::unordered_set<id_type> &scc) {
+        // Mark the current node as visited and add it to set of ccs
+        visited.insert(node);
+        scc.insert(node);
+
+        // Recur for all the vertices adjacent to this vertex
+        std::unordered_set<id_type> neighs = gt[node];
+        for (auto neigh = neighs.begin(); neigh != neighs.end(); ++neigh) {
+            // If neigh has not been visited yet
+            if (visited.find((*neigh)) == visited.end()) {
+                DFS_utils_scc(gt, *neigh, visited, scc);
+            }
+        }
+    }
+
+    void fill_order(id_type node, std::unordered_set<id_type> &visited,
+            std::stack<id_type> &s) {
+        visited.insert(node);
+
+        // Recur for all the vertices adjacent to this vertex
+        std::unordered_set<id_type> neighs = neighbours(node);
+        for (auto neigh = neighs.begin(); neigh != neighs.end(); ++neigh) {
+            // If neigh has not been visited yet
+            if (visited.find((*neigh)) == visited.end()) {
+                fill_order(*neigh, visited, s);
+            }
+        }
+        s.push(node);
+    }
+
+    adjl_t<id_type> get_transpose() {
+        adjl_t<id_type> gt;
+        // For each node
+
+        for (auto n: g) {
+            // For each node in the transpose graph, print neighs
+            for (auto neigh = n.second.begin(); neigh != n.second.end(); ++neigh) {
+                gt[*neigh].insert(n.first);
+            }
+        }
+        /*for (auto n: gt) {
+            // For each neighbour add reverse edge
+            std::cout << "Vicini di " << n.first << ": ";
+            for (auto neigh = n.second.begin(); neigh != n.second.end(); ++neigh) {
+                std::cout << *neigh << " ";
+            }
+            std::cout << std::endl;
+        }*/
+        return gt;
+    }
+
 
 public:
 
@@ -390,7 +456,6 @@ public:
 
 
     void print_ccs(std::vector<std::unordered_set<id_type>> ccs) {
-        std::cout << "Dentro print_css\n ";
         for (auto cc = ccs.begin(); cc != ccs.end(); ++cc) {
             std::cout << "New connected component:\n";
             for (auto node = cc->begin(); node != cc->end(); ++node) {
@@ -418,6 +483,49 @@ public:
             }
         }
         return ccs;
+    }
+
+    std::vector<std::unordered_set<id_type>> strongly_connected_components()
+    {
+        // Create empty set for visited nodes
+        std::unordered_set<id_type> visited;
+        // Create vector of strongly connected components
+        std::vector<std::unordered_set<id_type>> sccs;
+
+        std::stack<id_type> stack;
+
+        // Fill vertices in stack according to their finishing times
+        for (auto n: g) {
+            if (visited.find(n.first) == visited.end()) {
+                fill_order(n.first, visited, stack);
+            }
+        }
+
+        // Create a reversed graph
+        adjl_t<id_type> gt = get_transpose();
+
+        // Clear the set of visited nodes for second DFS
+        visited.clear();
+
+        std::clog << "Printing stack: ";
+        std::unordered_set<id_type> scc;
+        // Now process all vertices in order defined by the stack
+        while (stack.empty() == false){
+            // Pop a vertex from stack
+            id_type v = stack.top();
+            std::clog << v << " ";
+            stack.pop();
+
+            // Print Strongly connected component of the popped vertex
+            if (visited.find(v) == visited.end()) {
+                DFS_utils_scc(gt, v, visited, scc);
+                std::clog << "Taglia componente connessa: "
+                          << scc.size() << std::endl;
+                sccs.push_back(scc);
+                scc.clear();
+            }
+        }
+        return sccs;
     }
 };
 
