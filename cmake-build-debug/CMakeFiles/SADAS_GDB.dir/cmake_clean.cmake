@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.o"
   "CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o"
   "CMakeFiles/SADAS_GDB.dir/src/C++/test_orange.cpp.o"
+  "CMakeFiles/SADAS_GDB.dir/src/C++/test_ppr.cpp.o"
   "SADAS_GDB"
   "SADAS_GDB.pdb"
 )

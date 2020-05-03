@@ -285,6 +285,33 @@ src/C++/test_orange.cpp.s:
 	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_orange.cpp.s
 .PHONY : src/C++/test_orange.cpp.s
 
+src/C++/test_ppr.o: src/C++/test_ppr.cpp.o
+
+.PHONY : src/C++/test_ppr.o
+
+# target to build an object file
+src/C++/test_ppr.cpp.o:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_ppr.cpp.o
+.PHONY : src/C++/test_ppr.cpp.o
+
+src/C++/test_ppr.i: src/C++/test_ppr.cpp.i
+
+.PHONY : src/C++/test_ppr.i
+
+# target to preprocess a source file
+src/C++/test_ppr.cpp.i:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_ppr.cpp.i
+.PHONY : src/C++/test_ppr.cpp.i
+
+src/C++/test_ppr.s: src/C++/test_ppr.cpp.s
+
+.PHONY : src/C++/test_ppr.s
+
+# target to generate assembly for a file
+src/C++/test_ppr.cpp.s:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_ppr.cpp.s
+.PHONY : src/C++/test_ppr.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,6 +339,9 @@ help:
 	@echo "... src/C++/test_orange.o"
 	@echo "... src/C++/test_orange.i"
 	@echo "... src/C++/test_orange.s"
+	@echo "... src/C++/test_ppr.o"
+	@echo "... src/C++/test_ppr.i"
+	@echo "... src/C++/test_ppr.s"
 .PHONY : help
 
 

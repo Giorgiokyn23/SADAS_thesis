@@ -504,8 +504,8 @@ public:
     }
 
     /**
-     * This method exports a csv file containing the frequencies of
-     * the sizes of the strongly connected components given as input
+     * This method exports a csv file containing the sizes
+     * of the strongly connected components given as input
      * @param sccs vector of strongly connected components
      * @param path path of the file where to store the frequencies
      */
