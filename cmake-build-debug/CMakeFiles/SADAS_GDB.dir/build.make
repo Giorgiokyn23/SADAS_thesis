@@ -96,18 +96,18 @@ CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gemma/CLionProjects/SADAS_GDB/src/C++/NEXI_graph.cpp -o CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.s
 
-CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o: CMakeFiles/SADAS_GDB.dir/flags.make
-CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o: ../src/C++/prova.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gemma/CLionProjects/SADAS_GDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o -c /Users/gemma/CLionProjects/SADAS_GDB/src/C++/prova.cpp
+CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o: CMakeFiles/SADAS_GDB.dir/flags.make
+CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o: ../src/C++/test_components.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gemma/CLionProjects/SADAS_GDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o -c /Users/gemma/CLionProjects/SADAS_GDB/src/C++/test_components.cpp
 
-CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gemma/CLionProjects/SADAS_GDB/src/C++/prova.cpp > CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.i
+CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gemma/CLionProjects/SADAS_GDB/src/C++/test_components.cpp > CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.i
 
-CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gemma/CLionProjects/SADAS_GDB/src/C++/prova.cpp -o CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.s
+CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gemma/CLionProjects/SADAS_GDB/src/C++/test_components.cpp -o CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.s
 
 CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.o: CMakeFiles/SADAS_GDB.dir/flags.make
 CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.o: ../src/C++/test_blue.cpp
@@ -140,7 +140,7 @@ SADAS_GDB_OBJECTS = \
 "CMakeFiles/SADAS_GDB.dir/main.cpp.o" \
 "CMakeFiles/SADAS_GDB.dir/src/C++/CTP_graph.cpp.o" \
 "CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.o" \
-"CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o" \
+"CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o" \
 "CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.o" \
 "CMakeFiles/SADAS_GDB.dir/src/C++/test_orange.cpp.o"
 
@@ -150,7 +150,7 @@ SADAS_GDB_EXTERNAL_OBJECTS =
 SADAS_GDB: CMakeFiles/SADAS_GDB.dir/main.cpp.o
 SADAS_GDB: CMakeFiles/SADAS_GDB.dir/src/C++/CTP_graph.cpp.o
 SADAS_GDB: CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.o
-SADAS_GDB: CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o
+SADAS_GDB: CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o
 SADAS_GDB: CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.o
 SADAS_GDB: CMakeFiles/SADAS_GDB.dir/src/C++/test_orange.cpp.o
 SADAS_GDB: CMakeFiles/SADAS_GDB.dir/build.make

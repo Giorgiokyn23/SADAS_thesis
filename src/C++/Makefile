@@ -36,6 +36,9 @@ test_orange: test_orange.cpp utils.h AUI_graph.h SADAS_graph.h read_utilities.hp
 test_green: test_green.cpp utils.h AUI_graph.h SADAS_graph.h read_utilities.hpp
 	$(CC) $(CFLAGS) -D ORANGE -o test_green test_green.cpp
 
+test_components: test_components.cpp utils.h AUI_graph.h SADAS_graph.h read_utilities.hpp
+	$(CC) $(CFLAGS) -D TESTCC -o test_components test_components.cpp
+
 # Run tests
 run_prova:
 	make -s cleanall
@@ -76,3 +79,12 @@ run_green:
 	# Comment 2> /dev/null for printing log
 	./test_green 2> /dev/null
 	@echo "----------------------->Done with testing green<------------------------"
+
+run_components:
+	make -s cleanall
+	make -s test_components
+	@echo "------------------->Running test for components computation<---------------------"
+	# Comment 2> /dev/null for printing log
+	./test_components 2> /dev/null
+	@echo "----------------------->Done with testing components<------------------------"
+

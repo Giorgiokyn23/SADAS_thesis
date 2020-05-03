@@ -204,33 +204,6 @@ src/C++/NEXI_graph.cpp.s:
 	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/NEXI_graph.cpp.s
 .PHONY : src/C++/NEXI_graph.cpp.s
 
-src/C++/prova.o: src/C++/prova.cpp.o
-
-.PHONY : src/C++/prova.o
-
-# target to build an object file
-src/C++/prova.cpp.o:
-	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.o
-.PHONY : src/C++/prova.cpp.o
-
-src/C++/prova.i: src/C++/prova.cpp.i
-
-.PHONY : src/C++/prova.i
-
-# target to preprocess a source file
-src/C++/prova.cpp.i:
-	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.i
-.PHONY : src/C++/prova.cpp.i
-
-src/C++/prova.s: src/C++/prova.cpp.s
-
-.PHONY : src/C++/prova.s
-
-# target to generate assembly for a file
-src/C++/prova.cpp.s:
-	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/prova.cpp.s
-.PHONY : src/C++/prova.cpp.s
-
 src/C++/test_blue.o: src/C++/test_blue.cpp.o
 
 .PHONY : src/C++/test_blue.o
@@ -257,6 +230,33 @@ src/C++/test_blue.s: src/C++/test_blue.cpp.s
 src/C++/test_blue.cpp.s:
 	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_blue.cpp.s
 .PHONY : src/C++/test_blue.cpp.s
+
+src/C++/test_components.o: src/C++/test_components.cpp.o
+
+.PHONY : src/C++/test_components.o
+
+# target to build an object file
+src/C++/test_components.cpp.o:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.o
+.PHONY : src/C++/test_components.cpp.o
+
+src/C++/test_components.i: src/C++/test_components.cpp.i
+
+.PHONY : src/C++/test_components.i
+
+# target to preprocess a source file
+src/C++/test_components.cpp.i:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.i
+.PHONY : src/C++/test_components.cpp.i
+
+src/C++/test_components.s: src/C++/test_components.cpp.s
+
+.PHONY : src/C++/test_components.s
+
+# target to generate assembly for a file
+src/C++/test_components.cpp.s:
+	$(MAKE) -f CMakeFiles/SADAS_GDB.dir/build.make CMakeFiles/SADAS_GDB.dir/src/C++/test_components.cpp.s
+.PHONY : src/C++/test_components.cpp.s
 
 src/C++/test_orange.o: src/C++/test_orange.cpp.o
 
@@ -303,12 +303,12 @@ help:
 	@echo "... src/C++/NEXI_graph.o"
 	@echo "... src/C++/NEXI_graph.i"
 	@echo "... src/C++/NEXI_graph.s"
-	@echo "... src/C++/prova.o"
-	@echo "... src/C++/prova.i"
-	@echo "... src/C++/prova.s"
 	@echo "... src/C++/test_blue.o"
 	@echo "... src/C++/test_blue.i"
 	@echo "... src/C++/test_blue.s"
+	@echo "... src/C++/test_components.o"
+	@echo "... src/C++/test_components.i"
+	@echo "... src/C++/test_components.s"
 	@echo "... src/C++/test_orange.o"
 	@echo "... src/C++/test_orange.i"
 	@echo "... src/C++/test_orange.s"

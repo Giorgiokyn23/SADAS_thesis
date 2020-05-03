@@ -18,6 +18,7 @@ int main() {
     my_CTP.print_ccs(my_CTP.strongly_connected_components());
     std::cout << "=============NEXI strongly connected components=============\n";
     my_NEXI.print_ccs(my_NEXI.strongly_connected_components());
-
+    my_NEXI.scc_size_freqs(my_NEXI.strongly_connected_components(),
+            "../scc_sizes.csv");
     return 0;
 }

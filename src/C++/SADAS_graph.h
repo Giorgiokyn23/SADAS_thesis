@@ -26,8 +26,6 @@ using id2edg_t = std::map<couple<id_type>, std::vector<edge_t>>;
 
 template <typename id_type>
 using adjl_t = std::map<id_type, std::unordered_set<id_type>>;
-//
-
 
 template <typename id_type, typename node_t, typename edge_t>
 class SADAS_graph {
@@ -194,6 +192,13 @@ protected:
         }
     }
 
+    /**
+     * This method implements the utility function "fill order" of Kosaraju's
+     * algorithm for computing the strongly connected components of a graph
+     * @param node the starting node
+     * @param a reference to the visited a set of visited nodes (ids)
+     * @param s reference to the stack
+     */
     void fill_order(id_type node, std::unordered_set<id_type> &visited,
             std::stack<id_type> &s) {
         visited.insert(node);
@@ -209,6 +214,11 @@ protected:
         s.push(node);
     }
 
+    /**
+     * This private method is used to obtain the adjacency list of the
+     * transposed graph
+     * @return the adjacency list of the transposed graph
+     */
     adjl_t<id_type> get_transpose() {
         adjl_t<id_type> gt;
         // For each node
@@ -454,7 +464,10 @@ public:
         return visited;
     }
 
-
+    /**
+     * This method prints all the (strongly) connected components given as input
+     * @param ccs the vector of connected components
+     */
     void print_ccs(std::vector<std::unordered_set<id_type>> ccs) {
         for (auto cc = ccs.begin(); cc != ccs.end(); ++cc) {
             std::cout << "New connected component:\n";
@@ -464,6 +477,11 @@ public:
         }
     }
 
+    /**
+     * This method computes the connected components of the graph, seen as an
+     * undirected one
+     * @return a vector of sets of node ids (the ccs)
+     */
     std::vector<std::unordered_set<id_type>> connected_components() {
         //Make graph unoriented
         make_unoriented();
@@ -485,6 +503,29 @@ public:
         return ccs;
     }
 
+    /**
+     * This method exports a csv file containing the frequencies of
+     * the sizes of the strongly connected components given as input
+     * @param sccs vector of strongly connected components
+     * @param path path of the file where to store the frequencies
+     */
+    void scc_size_freqs (std::vector<std::unordered_set<id_type>> sccs,
+            std::string path) {
+        std::ofstream out_file;
+        out_file.open (path);
+        out_file << "Size" << std::endl;
+        for (auto scc = sccs.begin(); scc != sccs.end(); ++scc) {
+            out_file << (*scc).size() << std::endl;
+        }
+
+        out_file.close();
+    }
+
+    /**
+     * This method computes the strongly connected components of the graph,
+     * using Kosaraju's algorithm
+     * @return a vector of sets of node ids (the sccs)
+     */
     std::vector<std::unordered_set<id_type>> strongly_connected_components()
     {
         // Create empty set for visited nodes
